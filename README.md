@@ -140,7 +140,7 @@ stored as a public member variable of the class:
 	args.beta = "hello";
 ```
 and the other one is 'jquery', which borrows the idea of how jquery handles
-getters and setters: a member function with no paramter is getter, and
+getters and setters: a member function with no parameter is getter, and
 a member function with a parameter acts as setter, and return the class instance,
 so that you can call setters in a chain::
 ```
