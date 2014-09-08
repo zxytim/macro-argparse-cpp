@@ -29,7 +29,7 @@ Design goal
 
 Requirements
 ============
-	a decent c++ compiler with c++11 support
+a decent c++ compiler with c++11 support
 
 Setup
 =====
@@ -43,7 +43,7 @@ will be explained after.
 HOW TO USE?
 ===========
 Example:
-```
+```cpp
 #include "macro-argparse-plain.hh"
 
 DEF_ARGUMENT_CLASS(
@@ -68,13 +68,24 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 ```
+
+results:
+```
+Error: `--times' required but not specified.
+Usage: ./simple --times INT:TIMES [-c STRING:CONTENT] [-d] [-n STRING:NAME]
+Options:
+  --times INT:TIMES say how many times?
+  -c STRING:CONTENT what to say
+  -d, --decorate    decoreate the output
+  -n, --name STRING:NAME who to say
+```
 more examples in *example* directory, use *make test* to compile them.
 
 
 Define a class
 --------------
 
-Define an argument class:
+Format of defining an argument class:
 ```
 	DEF_ARGUMENT_CLASS(ArgumentClassName, [<type, name, default_val, presence, option>, ...])
 ```
@@ -111,11 +122,11 @@ some more examples:
 Parse Arguments
 -----------
 call
-```
+```cpp
 	args.parse_args(argc, argv);
 ```
 or use initializer
-```
+```cpp
 	Argument args(argc, argv);
 ```
 and you are set.
@@ -124,7 +135,7 @@ Argument Accessing Style
 ------------------------
 There are two argument accessing style. One is 'plain', in which arguments are
 stored as a public member variable of the class:
-```
+```cpp
 	std::cout << args.alpha << std::endl;
 	args.beta = "hello";
 ```
@@ -138,7 +149,7 @@ so that you can call setters in a chain::
 ```
 
 Furthermore, a generic setter *set* accessing arguments by string is also provided:
-```
+```cpp
 	args.set("alpha", 10).set("alpha", "11");
 ```
 
