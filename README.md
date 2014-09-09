@@ -51,7 +51,7 @@ DEF_ARGUMENT_CLASS(
 	std::string,	name,		"zxytim",	OPTIONAL, OPT_SLH(-n, --name, "who to say"),
 	std::string,	content,	"Bonjour",	OPTIONAL, OPT_SH(-c, "what to say"),
 	int,			times,		1,			REQUIRED, OPT_LH(--times, "say how many times?"),
-	bool,			decorate,	false,		OPTIONAL, OPT_SLWVH(-d, --decorate, true, "decoreate the output")
+	bool,			decorate,	false,		OPTIONAL, OPT_SLWH(-d, --decorate, true, "decoreate the output")
 	);
 
 int main(int argc, char *argv[]) {
