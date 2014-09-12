@@ -173,7 +173,7 @@ Useful Helper Functions
 
 Development
 ===========
-The project is undergo its fast prototyping phase. Source code
+The project is undergoing its fast prototyping phase. Source code
 is not well-organized nor well-documented at this stage.
 
 Any advice or question on the design or implementation techniques is warmly welcomed.
