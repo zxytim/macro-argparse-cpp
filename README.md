@@ -23,7 +23,7 @@ line parser is defined using C macros, hence has 'macro' in the name.
 Design goal
 ===========
 + keep code concise and informative
-+ no explicit type casting
++ static type with no explicit type casting code
 + write less code
 + header files only
 
